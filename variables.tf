@@ -9,7 +9,7 @@ variable "ami_id" {
   default     = {
     ap-southeast-1 = "ami-0532913178263be11"
     ap-southeast-2 = "ami-06259b63260eddc13"
-    ap-norteast-1 = "ami-0126975fb247bf2e7"
+    ap-northeast-1 = "ami-0126975fb247bf2e7"
   }
 }
 
@@ -26,4 +26,9 @@ variable "key_name" {
 variable "vpc_id" {
   description = "vpc id for security group"
   default     = "vpc-049209c28c1d4e603"
+}
+
+variable "ssh_cidr" {
+  description = "Only this host may SSH to the instance (Terraform/Jenkins server private IP)"
+  default     = "172.31.87.142/32"
 }
