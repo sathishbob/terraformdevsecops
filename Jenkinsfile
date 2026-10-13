@@ -100,7 +100,7 @@ pipeline {
             catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
               sh '''
                 docker run --rm -v "$WORKSPACE:/iac:ro" $TERRASCAN_IMAGE \
-                  scan -i terraform -d /iac -o junit-xml > reports/terrascan.xml
+                  scan -i terraform -d /iac --non-recursive -o junit-xml > reports/terrascan.xml
               '''
             }
           }
