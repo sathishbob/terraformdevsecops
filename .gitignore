@@ -1,0 +1,33 @@
+# Local .terraform directory (provider plugins, modules cache)
+.terraform/
+
+# State files (can contain secrets, keep in a remote backend instead)
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Variable files (often hold secrets or environment-specific values)
+*.tfvars
+*.tfvars.json
+
+# Override files (local-only overrides)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI config files
+.terraformrc
+terraform.rc
+
+# Saved plan files
+*.tfplan
+tfplan
+
+# Optional: SSH keys and env files
+*.pem
+*.key
+.env
